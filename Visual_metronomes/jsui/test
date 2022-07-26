@@ -1,0 +1,88 @@
+/*
+
+simple 2d dial
+
+arguments: fgred fggreen fgblue bgred bggreen bgblue dialred dialgreen dialblue
+
+*/
+
+sketch.default2d();
+var val = 0;
+var vbrgb = [1.,1.,1.,1.];
+var vfrgb = [0.5,0.5,0.5,1.];
+var vrgb2 = [0.7,0.7,0.7,1.];
+var last_x = 0;
+var last_y = 0;
+var beats = [1,2,3,4];
+var cursor = 0;
+var flag=false;
+
+// process arguments
+if (jsarguments.length>1)
+	vfrgb[0] = jsarguments[1]/255.;
+if (jsarguments.length>2)
+	vfrgb[1] = jsarguments[2]/255.;
+if (jsarguments.length>3)
+	vfrgb[2] = jsarguments[3]/255.;
+if (jsarguments.length>4)
+	vbrgb[0] = jsarguments[4]/255.;
+if (jsarguments.length>5)
+	vbrgb[1] = jsarguments[5]/255.;
+if (jsarguments.length>6)
+	vbrgb[2] = jsarguments[6]/255.;
+if (jsarguments.length>7)
+	vrgb2[0] = jsarguments[7]/255.;
+if (jsarguments.length>8)
+	vrgb2[1] = jsarguments[8]/255.;
+if (jsarguments.length>9)
+	vrgb2[2] = jsarguments[9]/255.;
+
+draw();
+
+function draw(){
+	with(sketch){
+		glclearcolor(0.,0.,0.,1.);
+		glclear();
+		moveto(0,0);
+		glcolor(1,1,1,1);
+		
+		if(flag){
+			glcolor(1,1,1,1);
+			circle(.2);
+			glcolor(0,0,0,1);
+			circle(0.15);
+			flag=false;
+		}
+		
+		circle(0.05);
+		
+		glcolor(1,1,1,1);
+		gllinewidth(2);
+		moveto(cursor,1);
+		lineto(cursor,-1);
+		
+		//lineto(.1,.1);
+		//lineto(-0.1,0.1);
+		//lineto(-0.1,-0.1);
+		}
+}
+
+function bang()
+{
+	//draw();
+	refresh();
+	outlet(0,val);
+}
+
+function msg_float(v)
+{	
+	//check for zero crossing
+	if(v<1.0 && cursor*v <= 0.001){
+		flag=true;
+	}
+	cursor=v;
+	notifyclients();
+	draw();
+	refresh();
+}
+	

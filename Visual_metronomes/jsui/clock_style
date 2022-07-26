@@ -1,0 +1,82 @@
+/*
+
+simple 2d dial
+
+arguments: fgred fggreen fgblue bgred bggreen bgblue dialred dialgreen dialblue
+
+*/
+
+sketch.default2d();
+var val = 0;
+var theta=0;
+var r = 0.8;
+var blink =  false;
+
+draw();
+
+function draw()
+{
+	var width = box.rect[2] - box.rect[0];
+	
+	with (sketch) {
+		shapeslice(180,1);
+		// erase background
+		glclearcolor(0,0,0,1);
+		glclear();
+		moveto(0,0);
+		gllinewidth(1);
+		glcolor(1,1,1,1);
+		circle(0.8);
+		glcolor(0,0,0,1);
+		circle(0.78);
+		glcolor(1,1,1,1);
+		lineto(0.8*Math.cos(theta),0.8*Math.sin(theta));
+		moveto(0,0);
+		lineto(0,-0.8);
+		if(blink){
+			blink=false;
+			circle(0.2);
+			glcolor(0,0,0,1);
+			circle(.15);
+		}
+		glcolor(1,1,1,1);
+		circle(0.05);
+		
+		
+	}
+}
+
+function bang()
+{
+	draw();
+	refresh();
+	outlet(0,val);
+}
+
+function msg_float(v)
+{
+	theta = -(v+.25 % 1.0) * 6.2831853072;
+	if(Math.abs(v % 1.0)<0.1){
+		blink = true;
+	}
+	notifyclients();
+	bang();
+}
+
+function forcesize(w,h)
+{
+	if (w!=h) {
+		h = w;
+		box.size(w,h);
+	}
+}
+forcesize.local = 1; //private
+
+function onresize(w,h)
+{
+	forcesize(w,h);
+	r = 0.4*Math.min(box.rect[2] - box.rect[0], box.rect[3] - box.rect[1]);
+	draw();
+	refresh();
+}
+onresize.local = 1; //private
