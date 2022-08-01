@@ -4,7 +4,7 @@
 		"appversion" : 		{
 			"major" : 8,
 			"minor" : 2,
-			"revision" : 2,
+			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
@@ -39,6 +39,67 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-17",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 668.0, 279.0, 71.0, 22.0 ],
+					"text" : "setfont Arial"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-15",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 661.0, 354.0, 86.0, 22.0 ],
+					"text" : "brgb 1. 1. 1. 1."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-14",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 661.0, 320.0, 86.0, 22.0 ],
+					"presentation_linecount" : 2,
+					"text" : "brgb 0. 0. 0. 1."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-2",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 540.0, 354.0, 83.0, 22.0 ],
+					"text" : "frgb 0. 1. 0. 1."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-8",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 540.0, 320.0, 83.0, 22.0 ],
+					"text" : "frgb 1. 0. 0. 1."
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"attr" : "nofsaa",
 					"id" : "obj-13",
@@ -212,6 +273,34 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-14", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-15", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-17", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-2", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -240,6 +329,13 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-8", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-9", 0 ]
 				}
 
@@ -247,7 +343,7 @@
  ],
 		"dependency_cache" : [ 			{
 				"name" : "clock_style",
-				"bootpath" : "~/Documents/GitHub/wagne342/Visual_metronomes/Visual_metronomes/jsui",
+				"bootpath" : "~/Documents/GitHub/Visual_metronomes/Visual_metronomes/jsui",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
