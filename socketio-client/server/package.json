@@ -1,0 +1,16 @@
+{
+  "name": "socket-ioserver",
+  "version": "1.0.0",
+  "description": "sandbox for visual metronomes over a network",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "test": "\"echo \\\"Error: no test Specified\\\" && exit 1\""
+  },
+  "author": "Jeremy Wagner",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1",
+    "socket.io": "^4.5.1"
+  }
+}
