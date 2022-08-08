@@ -7,14 +7,19 @@ app.get('/', (req, res) => {
 });
 
 io.on('connection', (socket) => {
-    console.log(`a user has connected`);
+    var address = socket.handshake.address;
+    console.log(`a user has connected on IP ${address}`);
     socket.on('disconnect', function() {
-        console.log('user disconnected')
+        console.log(`user disconnected at IP ${address}`);
     })
 
     socket.on('message', (msg) => {
         io.emit('message', msg);
     });
+
+    socket.on('progress', (msg) => {
+        io.emit('progress', (msg));
+    })
 });
 
 

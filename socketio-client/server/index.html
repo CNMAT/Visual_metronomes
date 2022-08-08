@@ -6,7 +6,7 @@
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { 
-        font-family: 'Montserrat', sans-serif; 
+        font-family: 'arial'; 
         color: white;
         background: black;
       }
@@ -29,6 +29,7 @@
     <div id="container">
       <div id="message"></div>
     </div>
+
     <div class="form">
       <input id="m"/><button>Send</button>
     </div>    
@@ -45,6 +46,9 @@
         socket.on('message', function(msg) {
           document.querySelector('#message').innerText = msg;
         });
+        socket.on('progress', function(msg) {
+          document.querySelector('#progress').value = msg;
+        })
       });
     </script>
   </body>
