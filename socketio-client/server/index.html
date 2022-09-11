@@ -6,19 +6,19 @@
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { 
-        font-family: 'arial'; 
+        font-family: 'Menlo'; 
         color: white;
         background: black;
       }
 
       #container {
         display: flex;
-        margin-left: 400px;
+        margin-left: 10px;
         align-items: center;
-        justify-content: left;
+        justify-content: center;
         width: 100vw;
         height: 100vh;
-        font-size: 12rem;
+        font-size: 12vmin;
       }
       .form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
       input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
@@ -29,7 +29,7 @@
     <div id="container">
       <div id="message"></div>
     </div>
-
+    
     <div class="form">
       <input id="m"/><button>Send</button>
     </div>    
