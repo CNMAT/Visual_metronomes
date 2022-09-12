@@ -40,13 +40,36 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-20",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 504.0, 283.0, 150.0, 20.0 ],
+					"text" : "clear"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 445.0, 283.0, 57.0, 22.0 ],
+					"text" : "message"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-57",
 					"maxclass" : "number",
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 595.75, 220.0, 50.0, 22.0 ]
+					"patching_rect" : [ 594.75, 194.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -78,7 +101,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 593.75, 256.0, 50.5, 22.0 ],
+					"patching_rect" : [ 592.75, 230.0, 50.5, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 1,
 						"precision" : 6
@@ -108,7 +131,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 32.0, 473.0, 196.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "connect http://xxx.xxx.xxx.xxx:3000"
 				}
 
@@ -132,7 +154,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 229.0, 243.0, 164.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "connect http://127.0.0.1:3000"
 				}
 
@@ -144,8 +165,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 699.0, 132.0, 152.0, 74.0 ],
-					"presentation_linecount" : 6,
+					"patching_rect" : [ 699.0, 132.0, 154.0, 74.0 ],
 					"text" : "sending an integer prepended with 'time'  will parse the int as time in milliseconds and format as hh:mm:ss"
 				}
 
@@ -157,7 +177,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 446.0, 139.0, 127.0, 60.0 ],
+					"patching_rect" : [ 445.0, 113.0, 127.0, 60.0 ],
 					"text" : "You can send arbitrary text strings prepended with the word 'message'"
 				}
 
@@ -204,7 +224,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 446.0, 201.0, 110.0, 22.0 ],
+					"patching_rect" : [ 445.0, 175.0, 110.0, 22.0 ],
 					"text" : "\"Here is some text\""
 				}
 
@@ -252,7 +272,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 931.0, 160.0, 405.0, 74.0 ],
+					"patching_rect" : [ 931.0, 160.0, 406.0, 74.0 ],
 					"text" : "This script starts the server on this computer. It could run on any computer on the network. This server's only job is to serve up our webpage that displays our text.  If you run it on another machine, you'll need tell the socketio-client.js script to connect to that machine's IP address on the network."
 				}
 
@@ -325,8 +345,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -389,7 +407,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 446.0, 225.0, 113.0, 22.0 ],
+					"patching_rect" : [ 445.0, 199.0, 113.0, 22.0 ],
 					"text" : "\"Move to your right\""
 				}
 
@@ -401,7 +419,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 522.0, 256.0, 55.0, 22.0 ],
+					"patching_rect" : [ 521.0, 230.0, 55.0, 22.0 ],
 					"text" : "12:35:64"
 				}
 
@@ -414,7 +432,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 446.0, 256.0, 50.0, 22.0 ]
+					"patching_rect" : [ 445.0, 230.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -425,7 +443,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 446.0, 283.0, 74.0, 22.0 ],
+					"patching_rect" : [ 445.0, 257.0, 74.0, 22.0 ],
 					"text" : "message $1"
 				}
 
@@ -510,8 +528,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,
@@ -531,6 +547,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-10", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-11", 0 ]
 				}
 
 			}
@@ -695,14 +718,14 @@
 			}
 , 			{
 				"name" : "server",
-				"bootpath" : "~/Documents/GitHub/wagne342/Visual_metronomes/socketio-client",
+				"bootpath" : "~/Documents/GitHub/Visual_metronomes/socketio-client",
 				"patcherrelativepath" : ".",
 				"type" : "fold",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "socketio-client.js",
-				"bootpath" : "~/Documents/GitHub/wagne342/Visual_metronomes/socketio-client",
+				"bootpath" : "~/Documents/GitHub/Visual_metronomes/socketio-client",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
