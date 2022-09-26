@@ -40,6 +40,7 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+<<<<<<< HEAD
 					"hidden" : 1,
 					"id" : "obj-13",
 					"maxclass" : "newobj",
@@ -74,6 +75,26 @@
 					"outlettype" : [ "bang" ],
 					"patching_rect" : [ 446.0, 17.0, 58.0, 22.0 ],
 					"text" : "loadbang"
+=======
+					"id" : "obj-20",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 504.0, 283.0, 150.0, 20.0 ],
+					"text" : "clear"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-11",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 445.0, 283.0, 57.0, 22.0 ],
+					"text" : "message"
+>>>>>>> afab254e5f2d3c22aa03fbafe7c7a4ff437b6add
 				}
 
 			}
@@ -85,7 +106,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 595.75, 220.0, 50.0, 22.0 ]
+					"patching_rect" : [ 594.75, 194.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -117,7 +138,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 4,
 					"outlettype" : [ "", "", "", "" ],
-					"patching_rect" : [ 593.75, 256.0, 50.5, 22.0 ],
+					"patching_rect" : [ 592.75, 230.0, 50.5, 22.0 ],
 					"saved_object_attributes" : 					{
 						"embed" : 1,
 						"precision" : 6
@@ -193,7 +214,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 446.0, 139.0, 127.0, 60.0 ],
+					"patching_rect" : [ 445.0, 113.0, 127.0, 60.0 ],
 					"text" : "You can send arbitrary text strings prepended with the word 'message'"
 				}
 
@@ -240,7 +261,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 446.0, 201.0, 110.0, 22.0 ],
+					"patching_rect" : [ 445.0, 175.0, 110.0, 22.0 ],
 					"text" : "\"Here is some text\""
 				}
 
@@ -423,7 +444,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 446.0, 225.0, 113.0, 22.0 ],
+					"patching_rect" : [ 445.0, 199.0, 113.0, 22.0 ],
 					"text" : "\"Move to your right\""
 				}
 
@@ -435,7 +456,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 522.0, 256.0, 55.0, 22.0 ],
+					"patching_rect" : [ 521.0, 230.0, 55.0, 22.0 ],
 					"text" : "12:35:64"
 				}
 
@@ -448,7 +469,7 @@
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
 					"parameter_enable" : 0,
-					"patching_rect" : [ 446.0, 256.0, 50.0, 22.0 ]
+					"patching_rect" : [ 445.0, 230.0, 50.0, 22.0 ]
 				}
 
 			}
@@ -459,7 +480,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 446.0, 283.0, 74.0, 22.0 ],
+					"patching_rect" : [ 445.0, 257.0, 74.0, 22.0 ],
 					"text" : "message $1"
 				}
 
@@ -568,6 +589,7 @@
 			}
 , 			{
 				"patchline" : 				{
+<<<<<<< HEAD
 					"destination" : [ "obj-13", 0 ],
 					"hidden" : 1,
 					"source" : [ "obj-11", 1 ]
@@ -596,6 +618,9 @@
 					"destination" : [ "obj-9", 0 ],
 					"hidden" : 1,
 					"order" : 0,
+=======
+					"destination" : [ "obj-1", 0 ],
+>>>>>>> afab254e5f2d3c22aa03fbafe7c7a4ff437b6add
 					"source" : [ "obj-11", 0 ]
 				}
 
@@ -777,14 +802,14 @@
 			}
 , 			{
 				"name" : "server",
-				"bootpath" : "~/Documents/GitHub/wagne342/Visual_metronomes/socketio-client",
+				"bootpath" : "~/Documents/GitHub/Visual_metronomes/socketio-client",
 				"patcherrelativepath" : ".",
 				"type" : "fold",
 				"implicit" : 1
 			}
 , 			{
 				"name" : "socketio-client.js",
-				"bootpath" : "~/Documents/GitHub/wagne342/Visual_metronomes/socketio-client",
+				"bootpath" : "~/Documents/GitHub/Visual_metronomes/socketio-client",
 				"patcherrelativepath" : ".",
 				"type" : "TEXT",
 				"implicit" : 1
