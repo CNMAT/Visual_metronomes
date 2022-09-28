@@ -6,10 +6,31 @@
     <style>
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { 
-        font-family: 'Menlo'; 
-        color: white;
-        background: black;
+        font-family: 'Menlo';
+        color: white; 
+        
+        
       }
+      #cue {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding-top: 20px;
+        margin-left: 10px;
+        margin-top: 10px;
+        border-style: hidden;
+        border-width: 5px;
+        border-radius: 15px;
+        align-items: center;
+        text-align: center;
+        text-overflow: clip;
+        justify-content: center;
+        width: 50%;
+        height: 30%;
+        font-size: 9vmin;   
+        background-color: id="cue_color";     
+      }
+      
 
       #container {
         display: flex;
@@ -19,36 +40,57 @@
         width: 100vw;
         height: 100vh;
         font-size: 12vmin;
+        
       }
-      .form { background: #000; padding: 3px; position: fixed; bottom: 0; width: 100%; }
-      input { border: 0; padding: 10px; width: 90%; margin-right: .5%; }
-      button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; }
+      /* .form { background: black; padding: 3px; position: fixed; bottom: 0; width: 100%; } */
+      /* input { border: 0; padding: 10px; width: 90%; margin-right: .5%; } */
+      /* button { width: 9%; background: rgb(130, 224, 255); border: none; padding: 10px; } */
     </style>
   </head>
   <body>
+    <div id="cue">
+    <div id="cue_text">
+  </div>
+  </div>
+    
+
     <div id="container">
       <div id="message"></div>
     </div>
     
-    <div class="form">
+    <!-- <div class="form">
       <input id="m"/><button>Send</button>
-    </div>    
+    </div>     -->
 
     <script src="/socket.io/socket.io.js"></script>
     <script>
       document.addEventListener('DOMContentLoaded', function() {
         const socket = io();
-        document.querySelector('button').addEventListener('click', function(e) {
-          e.preventDefault();
-          socket.emit('talkback', document.querySelector('#m').value);
-          document.querySelector('#m').value = '';
-        });
+        // document.querySelector('button').addEventListener('click', function(e) {
+        //   e.preventDefault();
+        //   socket.emit('talkback', document.querySelector('#m').value);
+        //   document.querySelector('#m').value = '';
+        // });
         socket.on('message', function(msg) {
           document.querySelector('#message').innerText = msg;
         });
+
+        socket.on('bgrgb', function(msg) {
+          document.querySelector('body').style.backgroundColor = msg;
+        });
+
+        socket.on('cue_text', function(msg){
+          document.querySelector('#cue_text').innerText = msg;
+        })
+
+        socket.on('cue_color', function(msg){
+          document.querySelector('#cue').style.backgroundColor = msg;
+        })
+
         socket.on('progress', function(msg) {
           document.querySelector('#progress').value = msg;
         })
+
       });
     </script>
   </body>

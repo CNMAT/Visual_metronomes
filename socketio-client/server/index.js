@@ -20,6 +20,22 @@ io.on('connection', (socket) => {
     socket.on('progress', (msg) => {
         io.emit('progress', (msg));
     })
+
+    socket.on('bgrgb', (msg) => {
+        io.emit('bgrgb', (msg));
+        //console.log(`set ${msg}`);
+    })
+
+    socket.on('cue_text', (msg) => {
+        io.emit('cue_text', (msg));
+        console.log(`Cue_text: ${msg}`);
+    })
+
+    socket.on('cue_color', (msg)=> {
+        io.emit('cue_color', (msg));
+        console.log(`cue_color: ${msg}`)
+    })
+
 });
 
 
