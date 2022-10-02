@@ -28,12 +28,22 @@ io.on('connection', (socket) => {
 
     socket.on('cue_text', (msg) => {
         io.emit('cue_text', (msg));
-        console.log(`Cue_text: ${msg}`);
+        // console.log(`Cue_text: ${msg}`);
     })
 
     socket.on('cue_color', (msg)=> {
         io.emit('cue_color', (msg));
-        console.log(`cue_color: ${msg}`)
+        //console.log(`cue_color: ${msg}`)
+    })
+
+    socket.on('time', (msg)=> {
+        io.emit('time', (msg));
+        // console.log(`time: ${msg}`)
+    })
+
+    socket.on('fullscreen', (msg)=>{
+        io.emit('fullscreen', (msg));
+        console.log(`fullscreen: ${msg}`);
     })
 
 });

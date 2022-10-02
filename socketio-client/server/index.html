@@ -12,34 +12,66 @@
         
       }
       #cue {
+        display: inline-block;
         position: absolute;
         top: 10px;
         left: 10px;
-        padding-top: 20px;
+        padding: 20px;
+        padding-bottom: 20px;
         margin-left: 10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        margin: 10px;
+        border-style: groove;
+        border-width: 5px;
+        border-radius: 15px;
+        align-items: center;
+        text-align: center;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        justify-content: center;
+        width: 48%;
+        height: 30%;
+        font-size: 9vmin;   
+        background-color: id="cue_color";     
+      }
+
+      #timeframe {
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        padding: 20px;
+        margin-left: 50%;
         margin-top: 10px;
         border-style: hidden;
         border-width: 5px;
         border-radius: 15px;
         align-items: center;
         text-align: center;
-        text-overflow: clip;
+        text-overflow: ellipsis;
         justify-content: center;
-        width: 50%;
+        width: 48%;
         height: 30%;
-        font-size: 9vmin;   
-        background-color: id="cue_color";     
+        font-size: 12vmin;   
+        color: white;
       }
       
 
       #container {
-        display: flex;
+        display: absolute;
         margin-left: 10px;
+        margin-top: 33%;
+        margin-bottom: 5%;
         align-items: center;
         justify-content: center;
-        width: 100vw;
-        height: 100vh;
-        font-size: 12vmin;
+        text-align: center;
+        overflow:hidden;
+        text-overflow: clip;
+        justify-content: center;
+        width: 96%;
+        height: 20%;
+        font-size: 5vh;
         
       }
       /* .form { background: black; padding: 3px; position: fixed; bottom: 0; width: 100%; } */
@@ -49,11 +81,12 @@
   </head>
   <body>
     <div id="cue">
-    <div id="cue_text">
-  </div>
-  </div>
+      <div id="cue_text"></div>
+    </div>
+    <div id="timeframe">
+      <div id="time"></div>
+    </div>
     
-
     <div id="container">
       <div id="message"></div>
     </div>
@@ -87,9 +120,18 @@
           document.querySelector('#cue').style.backgroundColor = msg;
         })
 
+        socket.on('time', function(msg) {
+          document.querySelector('#time').innerText = msg;
+        })
+
         socket.on('progress', function(msg) {
           document.querySelector('#progress').value = msg;
         })
+
+        
+       
+
+
 
       });
     </script>
