@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 414.0, 87.0, 1267.0, 929.0 ],
+		"rect" : [ 1251.0, 87.0, 1910.0, 1291.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,18 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"id" : "obj-47",
+					"linecount" : 5,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 150.0, 1037.0, 150.0, 74.0 ],
+					"text" : "feature req's\n\nalignment {top, bottom,\n\nfix negative values "
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-96",
 					"linecount" : 2,
@@ -375,7 +387,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 163.0, 77.0, 58.0, 22.0 ],
+					"patching_rect" : [ 44.0, 79.0, 58.0, 22.0 ],
 					"text" : "loadbang"
 				}
 
@@ -687,6 +699,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -870,6 +884,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,
