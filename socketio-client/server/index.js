@@ -17,6 +17,11 @@ io.on('connection', (socket) => {
         io.emit('message', msg);
     });
 
+    socket.on('msg_font_size', (msg)=> {
+        io.emit('msg_font_size', msg);
+        console.log(`set Font Size: ${msg}pt`);
+    });
+
     socket.on('progress', (msg) => {
         io.emit('progress', (msg));
     })

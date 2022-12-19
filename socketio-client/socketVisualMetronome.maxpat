@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 583.0, 87.0, 1910.0, 1291.0 ],
+		"rect" : [ 182.0, 296.0, 1312.0, 929.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -40,6 +40,42 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-74",
+					"maxclass" : "toggle",
+					"numinlets" : 1,
+					"numoutlets" : 1,
+					"outlettype" : [ "int" ],
+					"parameter_enable" : 0,
+					"patching_rect" : [ 780.0, 283.0, 24.0, 24.0 ]
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-61",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 780.0, 313.0, 70.0, 22.0 ],
+					"text" : "disp_ms $1"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-41",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 810.0, 256.0, 35.0, 22.0 ],
+					"text" : "clear"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"id" : "obj-73",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
@@ -68,8 +104,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 725.0, 1112.0, 83.0, 22.0 ],
-					"text" : "message hold"
+					"patching_rect" : [ 725.0, 1112.0, 120.0, 22.0 ],
+					"text" : "message \"ad libitum\""
 				}
 
 			}
@@ -147,12 +183,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-47",
-					"linecount" : 11,
+					"linecount" : 21,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 150.0, 1037.0, 150.0, 167.0 ],
-					"text" : "feature req's\n\nalignment {top, bottom,\n\nfix negative values \n\ncan node.js handle a signal\n\nextract flash to separate message\n"
+					"patching_rect" : [ 135.0, 964.5, 150.0, 301.0 ],
+					"text" : "feature req's\n\nalignment {top, bottom,\n\nfix negative values \n\ncan node.js handle a signal?\n\nextract flash to separate message; turn it on/off\n\nclear time display\n\nadd config\n\ntry stacking for now\n\nchange flash color\n\n\n"
 				}
 
 			}
@@ -212,8 +248,8 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1360.0, 25.0, 277.0, 22.0 ],
-					"text" : "cue_text \"Cue #1 ...Ready...\", cue_color 255 128 0"
+					"patching_rect" : [ 1360.0, 25.0, 279.0, 22.0 ],
+					"text" : "cue_text \"Cue #1 ...Armed...\", cue_color 255 128 0"
 				}
 
 			}
@@ -777,7 +813,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 44.0, 370.0, 41.0, 22.0 ],
+					"patching_rect" : [ 44.0, 368.0, 41.0, 22.0 ],
 					"text" : "reveal"
 				}
 
@@ -805,8 +841,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -857,7 +891,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 699.0, 283.0, 48.0, 22.0 ],
+					"patching_rect" : [ 699.0, 288.0, 48.0, 22.0 ],
 					"text" : "time $1"
 				}
 
@@ -1275,6 +1309,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-17", 0 ],
+					"source" : [ "obj-41", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
 					"source" : [ "obj-43", 0 ]
 				}
@@ -1372,6 +1413,13 @@
 			}
 , 			{
 				"patchline" : 				{
+					"destination" : [ "obj-1", 0 ],
+					"source" : [ "obj-61", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
 					"destination" : [ "obj-51", 0 ],
 					"source" : [ "obj-62", 0 ]
 				}
@@ -1444,6 +1492,13 @@
 				"patchline" : 				{
 					"destination" : [ "obj-73", 0 ],
 					"source" : [ "obj-72", 0 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-61", 0 ],
+					"source" : [ "obj-74", 0 ]
 				}
 
 			}

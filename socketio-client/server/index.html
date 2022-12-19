@@ -7,6 +7,7 @@
       * { margin: 0; padding: 0; box-sizing: border-box; }
       body { 
         font-family: 'Menlo';
+        background-color: black;
         color: white; 
         
         
@@ -25,12 +26,12 @@
         border-style: groove;
         border-width: 5px;
         border-radius: 15px;
-        align-items: center;
+        align-items: start;
         text-align: center;
         overflow: hidden;
         text-overflow: ellipsis;
         justify-content: center;
-        width: 48%;
+        width: 96%;
         height: 30%;
         font-size: 9vmin;   
         background-color: id="cue_color";     
@@ -39,19 +40,19 @@
       #timeframe {
         display: inline-block;
         position: absolute;
-        top: 10px;
+        top: 33%;
         left: 10px;
         padding: 20px;
-        margin-left: 50%;
+        margin-left: 10px;
         margin-top: 10px;
-        border-style: hidden;
+        border-style: none;
         border-width: 5px;
         border-radius: 15px;
         align-items: center;
         text-align: center;
         text-overflow: ellipsis;
         justify-content: center;
-        width: 48%;
+        width: 96%;
         height: 30%;
         font-size: 12vmin;   
         color: white;
@@ -59,19 +60,22 @@
       
 
       #container {
-        display: absolute;
+        display: flex;
+        position: absolute;
+        top: 70%;
+        bottom: 96%;
         margin-left: 10px;
-        margin-top: 33%;
-        margin-bottom: 5%;
-        align-items: center;
+        /* margin-top: 1%;
+        margin-bottom: 5%; */
+        align-items: start;
         justify-content: center;
         text-align: center;
-        overflow:hidden;
+        overflow: hidden;
         text-overflow: clip;
         justify-content: center;
         width: 96%;
-        height: 20%;
-        font-size: 5vh;
+        height: 30%;
+        font-size: id="msg_font_size";
         
       }
       /* .form { background: black; padding: 3px; position: fixed; bottom: 0; width: 100%; } */
@@ -126,6 +130,10 @@
 
         socket.on('progress', function(msg) {
           document.querySelector('#progress').value = msg;
+        })
+
+        socket.on('msg_font_size', function(msg) {
+          document.querySelector('#container').style.fontSize = `${msg}vmin`;
         })
 
         
