@@ -10,7 +10,7 @@
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 51.0, 95.0, 969.0, 929.0 ],
+		"rect" : [ 51.0, 95.0, 963.0, 929.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -81,7 +81,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 712.0, 398.0, 29.5, 22.0 ],
+					"patching_rect" : [ 712.0, 387.0, 29.5, 22.0 ],
 					"text" : "0"
 				}
 
@@ -93,7 +93,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 712.0, 374.0, 43.0, 22.0 ],
+					"patching_rect" : [ 712.0, 363.0, 43.0, 22.0 ],
 					"text" : "r reset"
 				}
 
@@ -810,7 +810,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 644.0, 448.0, 48.0, 22.0 ],
+					"patching_rect" : [ 644.0, 430.0, 48.0, 22.0 ],
 					"text" : "time $1"
 				}
 
@@ -822,7 +822,7 @@
 					"numinlets" : 3,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "bang" ],
-					"patching_rect" : [ 644.0, 422.0, 41.0, 22.0 ],
+					"patching_rect" : [ 644.0, 411.0, 41.0, 22.0 ],
 					"text" : "line 0."
 				}
 
@@ -834,7 +834,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 644.0, 398.0, 59.0, 22.0 ],
+					"patching_rect" : [ 644.0, 387.0, 59.0, 22.0 ],
 					"text" : "$1, $2 $3"
 				}
 
@@ -846,7 +846,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 644.0, 374.0, 42.0, 22.0 ],
+					"patching_rect" : [ 644.0, 363.0, 42.0, 22.0 ],
 					"text" : "r timer"
 				}
 
@@ -858,7 +858,7 @@
 					"numinlets" : 0,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 1191.5, 463.0, 47.0, 22.0 ],
+					"patching_rect" : [ 1211.5, 418.0, 47.0, 22.0 ],
 					"text" : "r bgrgb"
 				}
 
@@ -1028,7 +1028,6 @@
 						"style" : "",
 						"subpatcher_template" : "",
 						"assistshowspatchername" : 0,
-						"visible" : 1,
 						"boxes" : [ 							{
 								"box" : 								{
 									"id" : "obj-49",
@@ -1038,7 +1037,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 925.600000000000023, 461.0, 273.0, 49.0 ],
-									"presentation_linecount" : 3,
 									"text" : ";\rcue cue_text \"Cue 4 Ready...\", cue_color 255 0 0;\rmessage message"
 								}
 
@@ -1151,7 +1149,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 632.399999999999977, 227.0, 271.0, 49.0 ],
-									"presentation_linecount" : 3,
 									"text" : ";\rcue cue_text \"Cue 2 Finished...\", cue_color 0 0 0;\rmessage message"
 								}
 
@@ -1202,7 +1199,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 339.199999999999989, 461.0, 276.0, 62.0 ],
-									"presentation_linecount" : 4,
 									"text" : ";\rcue cue_text \"Cue  2 Ready...\", cue_color 255 0 0;\rtime time clear;\rmessage message"
 								}
 
@@ -1216,7 +1212,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 339.199999999999989, 352.0, 277.0, 76.0 ],
-									"presentation_linecount" : 5,
 									"text" : ";\rcue cue_text \"Cue 1 Complete...\", cue_color 0 0 0;\rtime time clear;\rflasher 0;\rmessage message ...Firmata..."
 								}
 
@@ -1242,7 +1237,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 339.199999999999989, 227.0, 284.0, 89.0 ],
-									"presentation_linecount" : 6,
 									"text" : ";\rcue cue_text \"Cue 1 Running...\", cue_color 0 255 0;\rtime time clear;\rmessage msg_font_size 20;\rmeter 120 4 5 4 7 2 4 4 4 4 7 6;\rflasher 1"
 								}
 
@@ -1292,7 +1286,6 @@
 									"numoutlets" : 1,
 									"outlettype" : [ "" ],
 									"patching_rect" : [ 46.0, 227.0, 277.0, 76.0 ],
-									"presentation_linecount" : 5,
 									"text" : ";\rcue cue_text \"Cue 1 Ready\", cue_color 255 128 0;\rtime time clear;\rmessage message;\r"
 								}
 
@@ -1735,7 +1728,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 59.0, 361.0, 258.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "cue_text \"Cue 1 Running...\", cue_color 0 255 0"
 				}
 
@@ -1770,7 +1762,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 1134.0, 184.5, 289.0, 47.0 ],
+					"patching_rect" : [ 1134.0, 184.5, 290.0, 47.0 ],
 					"text" : "Lastly, the entire background of the webpage can be updated on the fly with the 'bgrgb' message. This allows us to create flashing effects, if needed."
 				}
 
@@ -1853,7 +1845,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 623.0, 305.0, 116.0, 47.0 ],
-					"presentation_linecount" : 6,
 					"text" : "negative values also work for countdown"
 				}
 
@@ -1996,7 +1987,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 49.0, 81.0, 686.0, 87.0 ],
+					"patching_rect" : [ 49.0, 81.0, 689.0, 87.0 ],
 					"text" : "This is a demonstration of a client-server model for cueing actions at a distance over a network. The node.js scripts in this patch work together to build a webpage on which basic information and graphics can be displayed to coordinate the performance of a piece of music.  Conceptually, the 'server' and 'socketi-client' could be combined into a single node.js script, but this topology allows us to run a server on one machine that can accept cue messages from any machine on the network. \n\nThis demonstration constructs a simple display in 3 parts: 1) Cues 2) Time-Display & 3) Messages"
 				}
 
@@ -2059,7 +2050,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 753.0, 81.0, 269.0, 35.0 ],
-					"presentation_linecount" : 2,
 					"text" : ";\rmax launch_browser http://localhost:3000 --kiosk"
 				}
 
@@ -2205,7 +2195,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 782.0, 231.0, 168.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "\"Here is some text instruction\""
 				}
 
@@ -2217,8 +2206,7 @@
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 623.0, 608.0, 406.0, 74.0 ],
-					"presentation_linecount" : 5,
+					"patching_rect" : [ 623.0, 608.0, 409.0, 74.0 ],
 					"text" : "This script starts the server on this computer. It could run on any computer on the network. This server's only job is to serve up our webpage that displays our webpage.  If you run it on another machine, you'll need tell the socketio-client.js script to connect to that machine's IP address on the network."
 				}
 
@@ -2279,8 +2267,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -2383,8 +2369,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -2459,6 +2443,7 @@
 		"lines" : [ 			{
 				"patchline" : 				{
 					"destination" : [ "obj-91", 0 ],
+					"midpoints" : [ 198.5, 681.5, 58.5, 681.5 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
@@ -2569,6 +2554,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-59", 0 ],
+					"midpoints" : [ 450.0, 466.5, 343.5, 466.5 ],
 					"source" : [ "obj-119", 0 ]
 				}
 
@@ -2583,6 +2569,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-83", 0 ],
+					"midpoints" : [ 1221.0, 455.0, 1143.5, 455.0 ],
 					"source" : [ "obj-121", 0 ]
 				}
 
@@ -2611,6 +2598,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-59", 0 ],
+					"midpoints" : [ 653.5, 467.0, 343.5, 467.0 ],
 					"source" : [ "obj-126", 0 ]
 				}
 
@@ -2633,6 +2621,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-71", 0 ],
+					"midpoints" : [ 912.5, 466.5, 791.5, 466.5 ],
 					"source" : [ "obj-132", 0 ]
 				}
 
@@ -2684,6 +2673,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-125", 0 ],
+					"midpoints" : [ 721.5, 409.5, 653.5, 409.5 ],
 					"source" : [ "obj-147", 0 ]
 				}
 
@@ -2719,6 +2709,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
+					"midpoints" : [ 560.5, 639.0, 494.5, 639.0 ],
 					"source" : [ "obj-19", 0 ]
 				}
 
@@ -2726,6 +2717,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
+					"midpoints" : [ 579.5, 681.5, 490.5, 681.5 ],
 					"source" : [ "obj-2", 1 ]
 				}
 
@@ -2761,6 +2753,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
+					"midpoints" : [ 91.5, 581.0, 58.5, 581.0 ],
 					"source" : [ "obj-3", 0 ]
 				}
 
@@ -2805,6 +2798,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-83", 0 ],
+					"midpoints" : [ 1191.5, 430.5, 1143.5, 430.5 ],
 					"source" : [ "obj-43", 0 ]
 				}
 
@@ -2812,6 +2806,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
+					"midpoints" : [ 276.5, 629.0, 58.5, 629.0 ],
 					"source" : [ "obj-46", 0 ]
 				}
 
@@ -2862,6 +2857,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
+					"midpoints" : [ 91.5, 629.0, 58.5, 629.0 ],
 					"source" : [ "obj-6", 0 ]
 				}
 
@@ -2897,6 +2893,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
+					"midpoints" : [ 157.5, 582.0, 58.5, 582.0 ],
 					"source" : [ "obj-7", 0 ]
 				}
 
@@ -2926,6 +2923,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-20", 0 ],
+					"midpoints" : [ 68.5, 411.0, 58.5, 411.0 ],
 					"source" : [ "obj-78", 0 ]
 				}
 
@@ -2933,6 +2931,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-20", 0 ],
+					"midpoints" : [ 68.5, 426.5, 58.5, 426.5 ],
 					"source" : [ "obj-79", 0 ]
 				}
 
@@ -2940,6 +2939,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
+					"midpoints" : [ 108.5, 643.5, 58.5, 643.5 ],
 					"source" : [ "obj-8", 0 ]
 				}
 
@@ -2997,6 +2997,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-83", 0 ],
+					"midpoints" : [ 1302.5, 455.0, 1143.5, 455.0 ],
 					"source" : [ "obj-90", 0 ]
 				}
 
