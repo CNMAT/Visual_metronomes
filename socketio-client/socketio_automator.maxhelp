@@ -40,6 +40,29 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-31",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 911.0, 502.0, 440.0, 20.0 ],
+					"text" : "Blink a metronome display at tempo 120, counting beats in groups of 3, 4, then 5."
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-27",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 911.0, 524.0, 354.0, 22.0 ],
+					"text" : "metronome 120 3 4 5, flash 1, message_blink_color 255 255 255"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontface" : 0,
 					"id" : "obj-77",
 					"linecount" : 6,
@@ -72,7 +95,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 1248.0, 196.0, 174.0, 20.0 ],
-					"presentation_linecount" : 2,
 					"text" : "clear all messages from panels"
 				}
 
@@ -201,7 +223,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 646.0, 216.0, 217.0, 33.0 ],
-					"presentation_linecount" : 4,
 					"text" : "message panel blink (milliseconds)\n0 stops blinking, sets background black"
 				}
 
@@ -273,7 +294,6 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 424.0, 216.0, 119.0, 22.0 ],
-					"presentation_linecount" : 2,
 					"text" : "message_blink 1000"
 				}
 
@@ -344,7 +364,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 164.0, 216.0, 206.0, 20.0 ],
-					"presentation_linecount" : 2,
 					"text" : "time panel, timer descending 10 to 0\""
 				}
 
@@ -368,7 +387,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 606.0, 123.0, 217.0, 33.0 ],
-					"presentation_linecount" : 4,
 					"text" : "set cue panel blink (milliseconds)\n0 stops blinking, sets background black"
 				}
 
@@ -380,7 +398,6 @@
 					"numinlets" : 1,
 					"numoutlets" : 0,
 					"patching_rect" : [ 271.0, 55.0, 152.0, 20.0 ],
-					"presentation_linecount" : 2,
 					"text" : "set cue panel text (symbol)"
 				}
 
@@ -464,7 +481,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 210.0, 55.0, 57.0, 22.0 ],
-					"text" : "cue_text "
+					"text" : "cue_text"
 				}
 
 			}
@@ -618,6 +635,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -636,6 +655,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -648,8 +669,8 @@
 					"id" : "obj-1",
 					"maxclass" : "newobj",
 					"numinlets" : 1,
-					"numoutlets" : 2,
-					"outlettype" : [ "message", "" ],
+					"numoutlets" : 3,
+					"outlettype" : [ "message", "", "bang" ],
 					"patching_rect" : [ 47.0, 386.0, 113.0, 22.0 ],
 					"text" : "socketio_automator"
 				}
@@ -666,7 +687,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-3", 0 ],
-					"midpoints" : [ 150.5, 411.5, 219.5, 411.5 ],
+					"midpoints" : [ 103.5, 411.5, 219.5, 411.5 ],
 					"source" : [ "obj-1", 1 ]
 				}
 
@@ -751,6 +772,14 @@
 					"destination" : [ "obj-5", 0 ],
 					"midpoints" : [ 196.5, 444.5, 56.5, 444.5 ],
 					"source" : [ "obj-2", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-44", 0 ],
+					"midpoints" : [ 920.5, 556.0, 882.0, 556.0, 882.0, 353.0, 433.5, 353.0 ],
+					"source" : [ "obj-27", 0 ]
 				}
 
 			}
