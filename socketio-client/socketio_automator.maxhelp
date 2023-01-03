@@ -40,6 +40,30 @@
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
 				"box" : 				{
+					"id" : "obj-33",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 246.0, 299.0, 150.0, 47.0 ],
+					"text" : "three arguments starts timer at {1} going to {2} in {3} ms"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-24",
+					"maxclass" : "message",
+					"numinlets" : 2,
+					"numoutlets" : 1,
+					"outlettype" : [ "" ],
+					"patching_rect" : [ 73.0, 298.0, 159.0, 22.0 ],
+					"text" : "timer 120000 130000 10000"
+				}
+
+			}
+, 			{
+				"box" : 				{
 					"fontface" : 0,
 					"id" : "obj-20",
 					"maxclass" : "o.expr.codebox",
@@ -504,7 +528,7 @@
 					"numinlets" : 1,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 73.0, 300.0, 29.0, 22.0 ],
+					"patching_rect" : [ 73.0, 328.0, 29.0, 22.0 ],
 					"text" : "thru"
 				}
 
@@ -529,7 +553,7 @@
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
 					"patching_rect" : [ 210.0, 55.0, 57.0, 22.0 ],
-					"text" : "cue_text "
+					"text" : "cue_text"
 				}
 
 			}
@@ -683,6 +707,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -701,6 +727,8 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
 						"watch" : 0
 					}
 ,
@@ -816,6 +844,13 @@
 					"destination" : [ "obj-5", 0 ],
 					"midpoints" : [ 196.5, 444.5, 56.5, 444.5 ],
 					"source" : [ "obj-2", 1 ]
+				}
+
+			}
+, 			{
+				"patchline" : 				{
+					"destination" : [ "obj-12", 0 ],
+					"source" : [ "obj-24", 0 ]
 				}
 
 			}
