@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 3,
+			"minor" : 6,
 			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 51.0, 95.0, 963.0, 929.0 ],
+		"rect" : [ 93.0, 100.0, 1252.0, 929.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -39,6 +39,30 @@
 		"subpatcher_template" : "",
 		"assistshowspatchername" : 0,
 		"boxes" : [ 			{
+				"box" : 				{
+					"bubble" : 1,
+					"id" : "obj-32",
+					"linecount" : 3,
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 789.5, 634.5, 274.0, 51.0 ],
+					"text" : "As of Max 8.5.0 which bumps Node.js to version 20.6, servers run as modules, requiring --experimental-modules flag to import"
+				}
+
+			}
+, 			{
+				"box" : 				{
+					"id" : "obj-25",
+					"maxclass" : "comment",
+					"numinlets" : 1,
+					"numoutlets" : 0,
+					"patching_rect" : [ 372.0, 45.0, 150.0, 20.0 ],
+					"text" : "Revision June 2024"
+				}
+
+			}
+, 			{
 				"box" : 				{
 					"id" : "obj-151",
 					"maxclass" : "message",
@@ -210,7 +234,7 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 3,
+							"minor" : 6,
 							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
@@ -993,7 +1017,7 @@
 						"fileversion" : 1,
 						"appversion" : 						{
 							"major" : 8,
-							"minor" : 3,
+							"minor" : 6,
 							"revision" : 1,
 							"architecture" : "x64",
 							"modernui" : 1
@@ -2202,12 +2226,12 @@
 , 			{
 				"box" : 				{
 					"id" : "obj-23",
-					"linecount" : 5,
+					"linecount" : 4,
 					"maxclass" : "comment",
 					"numinlets" : 1,
 					"numoutlets" : 0,
-					"patching_rect" : [ 623.0, 608.0, 409.0, 74.0 ],
-					"text" : "This script starts the server on this computer. It could run on any computer on the network. This server's only job is to serve up our webpage that displays our webpage.  If you run it on another machine, you'll need tell the socketio-client.js script to connect to that machine's IP address on the network."
+					"patching_rect" : [ 623.0, 569.0, 409.0, 60.0 ],
+					"text" : "This script starts the server on this computer. It could run on any computer on the network. This server's only job is to serve up our webpage.  If you run it on another machine, you'll need tell the socketio-client.js script to connect to that machine's IP address on the network."
 				}
 
 			}
@@ -2218,7 +2242,7 @@
 					"numinlets" : 2,
 					"numoutlets" : 1,
 					"outlettype" : [ "" ],
-					"patching_rect" : [ 551.0, 608.0, 63.0, 22.0 ],
+					"patching_rect" : [ 552.0, 608.0, 63.0, 22.0 ],
 					"text" : "script stop"
 				}
 
@@ -2239,7 +2263,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 481.0, 693.0, 400.0, 220.0 ],
+					"patching_rect" : [ 485.0, 693.0, 535.0, 532.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -2263,14 +2287,17 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 485.0, 649.0, 104.0, 22.0 ],
+					"patching_rect" : [ 485.0, 649.0, 305.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
+						"options" : [ "--experimental-modules" ],
 						"watch" : 0
 					}
 ,
-					"text" : "node.script server"
+					"text" : "node.script index.mjs @options --experimental-modules"
 				}
 
 			}
@@ -2369,7 +2396,9 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"watch" : 0
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
+						"watch" : 1
 					}
 ,
 					"text" : "node.script socketio-client.js"
@@ -2709,7 +2738,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-2", 0 ],
-					"midpoints" : [ 560.5, 639.0, 494.5, 639.0 ],
+					"midpoints" : [ 561.5, 639.0, 494.5, 639.0 ],
 					"source" : [ "obj-19", 0 ]
 				}
 
@@ -2717,7 +2746,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-18", 0 ],
-					"midpoints" : [ 579.5, 681.5, 490.5, 681.5 ],
+					"midpoints" : [ 780.5, 681.5, 494.5, 681.5 ],
 					"source" : [ "obj-2", 1 ]
 				}
 
@@ -2961,7 +2990,7 @@
 , 			{
 				"patchline" : 				{
 					"destination" : [ "obj-1", 0 ],
-					"midpoints" : [ 1143.5, 507.5, 58.5, 507.5 ],
+					"midpoints" : [ 1143.5, 508.5, 58.5, 508.5 ],
 					"source" : [ "obj-83", 0 ]
 				}
 
@@ -3010,6 +3039,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "index.mjs",
+				"bootpath" : "~/Documents/GitHub/wagne342/Visual_metronomes/socketio-client/server",
+				"patcherrelativepath" : "./server",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "n4m.monitor.maxpat",
 				"bootpath" : "C74:/packages/Node for Max/patchers/debug-monitor",
 				"type" : "JSON",
@@ -3019,13 +3055,6 @@
 				"name" : "resize_n4m_monitor_patcher.js",
 				"bootpath" : "C74:/packages/Node for Max/patchers/debug-monitor",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "server",
-				"bootpath" : "~/Documents/GitHub/wagne342/Visual_metronomes/socketio-client",
-				"patcherrelativepath" : ".",
-				"type" : "fold",
 				"implicit" : 1
 			}
 , 			{
