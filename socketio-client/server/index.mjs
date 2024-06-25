@@ -2,6 +2,10 @@ import express from "express";
 import { createServer } from "http";
 import { Server } from "socket.io";
 
+import * as url from 'url';
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = url.fileURLToPath(new URL('.', import.meta.url));
+
 const app = express();
 const httpServer = createServer(app);
 const io = new Server(httpServer, { /* options */ });

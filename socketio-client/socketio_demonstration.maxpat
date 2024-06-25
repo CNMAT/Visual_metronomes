@@ -2263,7 +2263,7 @@
 					"numoutlets" : 1,
 					"offset" : [ 0.0, 0.0 ],
 					"outlettype" : [ "bang" ],
-					"patching_rect" : [ 485.0, 693.0, 535.0, 532.0 ],
+					"patching_rect" : [ 485.0, 693.0, 400.0, 220.0 ],
 					"viewvisibility" : 1
 				}
 
@@ -2396,8 +2396,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,

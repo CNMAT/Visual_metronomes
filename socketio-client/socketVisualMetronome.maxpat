@@ -3,14 +3,14 @@
 		"fileversion" : 1,
 		"appversion" : 		{
 			"major" : 8,
-			"minor" : 3,
+			"minor" : 6,
 			"revision" : 1,
 			"architecture" : "x64",
 			"modernui" : 1
 		}
 ,
 		"classnamespace" : "box",
-		"rect" : [ 182.0, 296.0, 1312.0, 929.0 ],
+		"rect" : [ 182.0, 154.0, 1312.0, 929.0 ],
 		"bglocked" : 0,
 		"openinpresentation" : 0,
 		"default_fontsize" : 12.0,
@@ -837,14 +837,17 @@
 					"numinlets" : 1,
 					"numoutlets" : 2,
 					"outlettype" : [ "", "" ],
-					"patching_rect" : [ 931.0, 305.0, 104.0, 22.0 ],
+					"patching_rect" : [ 931.0, 305.0, 305.0, 22.0 ],
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
+						"node_bin_path" : "",
+						"npm_bin_path" : "",
+						"options" : [ "--experimental-modules" ],
 						"watch" : 0
 					}
 ,
-					"text" : "node.script server"
+					"text" : "node.script index.mjs @options --experimental-modules"
 				}
 
 			}
@@ -1024,8 +1027,6 @@
 					"saved_object_attributes" : 					{
 						"autostart" : 0,
 						"defer" : 0,
-						"node_bin_path" : "",
-						"npm_bin_path" : "",
 						"watch" : 1
 					}
 ,
@@ -1587,6 +1588,13 @@
 				"implicit" : 1
 			}
 , 			{
+				"name" : "index.mjs",
+				"bootpath" : "~/Documents/GitHub/wagne342/Visual_metronomes/socketio-client/server",
+				"patcherrelativepath" : "./server",
+				"type" : "TEXT",
+				"implicit" : 1
+			}
+, 			{
 				"name" : "n4m.monitor.maxpat",
 				"bootpath" : "C74:/packages/Node for Max/patchers/debug-monitor",
 				"type" : "JSON",
@@ -1596,13 +1604,6 @@
 				"name" : "resize_n4m_monitor_patcher.js",
 				"bootpath" : "C74:/packages/Node for Max/patchers/debug-monitor",
 				"type" : "TEXT",
-				"implicit" : 1
-			}
-, 			{
-				"name" : "server",
-				"bootpath" : "~/Documents/GitHub/wagne342/Visual_metronomes/socketio-client",
-				"patcherrelativepath" : ".",
-				"type" : "fold",
 				"implicit" : 1
 			}
 , 			{
